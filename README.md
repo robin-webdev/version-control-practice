@@ -17,34 +17,25 @@ I already knew Git and GitHub, which I learned about 2 years ago. However, I did
 
 ### Phase 2: Feature Development & Branching
 
-Create and develop on multiple feature branches simultaneously:
+Build a simple React Todo App with multiple features across different branches.
 
-| Branch Name | Purpose | Commits |
-|-------------|---------|---------|
-| `feature/user-auth` | User authentication system | 3-4 |
-| `feature/dashboard` | Dashboard interface | 3-4 |
-| `feature/api-integration` | Backend API integration | 3-4 |
-| `bugfix/login-error` | Login functionality bug fix | 2-3 |
+#### Project Overview
+A basic Todo Application with the following features:
+- Display todos
+- Add new todos
+- Mark todos as complete
+- Delete todos
 
-**Workflow:**
-1. Create each branch from `main`
-2. Make 3-4 meaningful commits per branch
-3. Use conventional commit messages:
-   - `feat:` for features
-   - `fix:` for bug fixes
-   - `style:` for styling changes
-   - `docs:` for documentation
-   - `test:` for tests
- 
-**Example Commits:**
+#### Feature Branches Structure
+
+| Branch Name | Feature | Components/Files | Commits |
+|-------------|---------|------------------|---------|
+| `feature/todo-list-display` | Display todos from state | `TodoList.jsx`, `TodoItem.jsx` | 3-4 |
+| `feature/add-todo-form` | Form to add new todos | `AddTodoForm.jsx`, update `App.jsx` | 3-4 |
+| `feature/delete-todo` | Delete todo functionality | Update `TodoItem.jsx`, `App.jsx` | 2-3 |
+| `feature/filter-todos` | Filter by status (All/Active/Completed) | `FilterButtons.jsx`, update `App.jsx` | 3-4 |
 
 
-
-**Key Concepts:**
-- Branch creation and switching
-- Feature isolation
-- Conventional commit messages
-- Branch naming conventions
 
 ---
 
