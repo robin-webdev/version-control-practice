@@ -6,6 +6,10 @@ const Main = () => {
   const [tasks, setTasks] = useContext(data);
   const audio = useRef();
 
+  const handleDelete = (ind) => {
+    setTasks(tasks.filter((task, index) => index !== ind));
+  };
+
   const handleComplete = (ind) => {
     setTasks(
       tasks.map((task, index) => {
@@ -51,7 +55,10 @@ const Main = () => {
                 </div>
                 <div className="nocut">{task.isCompleted && "Completed"}</div>
               </div>
-              <div className="delete-button">
+              <div
+                className="delete-button"
+                onClick={() => handleDelete(index)}
+              >
                 <i className="fa-solid fa-trash"></i>
               </div>
             </div>
