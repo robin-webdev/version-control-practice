@@ -3,6 +3,7 @@ import "./App.css";
 import { data } from "./Context";
 import { useState } from "react";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Main from "../Components/Main";
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
         <Header />
         <data.Provider value={tasks}>
           <Main />
+          <Footer />
         </data.Provider>
 
       </div>
