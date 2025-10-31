@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./App.css";
 import { data } from "./Context";
 import { useState } from "react";
+import Main from "../Components/Main";
 
 const App = () => {
   const tasks = useState(JSON.parse(localStorage.getItem("tasks")) || []);
@@ -14,7 +15,7 @@ const App = () => {
     <>
       <div className="container">
         <data.Provider value={tasks}>
-          
+          <Main />
         </data.Provider>
 
       </div>
