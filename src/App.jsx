@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./App.css";
 import { data } from "./Context";
 import { useState } from "react";
+import Main from "../Components/Main";
 import Header from "../components/Header";
 
 
@@ -17,7 +18,7 @@ const App = () => {
       <div className="container">
         <Header />
         <data.Provider value={tasks}>
-          
+          <Main />
         </data.Provider>
 
       </div>
