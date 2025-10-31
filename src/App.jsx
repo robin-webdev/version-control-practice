@@ -3,6 +3,8 @@ import "./App.css";
 import { data } from "./Context";
 import { useState } from "react";
 import Main from "../Components/Main";
+import Header from "../components/Header";
+
 
 const App = () => {
   const tasks = useState(JSON.parse(localStorage.getItem("tasks")) || []);
@@ -14,6 +16,7 @@ const App = () => {
   return (
     <>
       <div className="container">
+        <Header />
         <data.Provider value={tasks}>
           <Main />
         </data.Provider>
