@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import "./App.css";
 import { data } from "./Context";
 import { useState } from "react";
+import Header from "../components/Header";
+
 
 const App = () => {
   const tasks = useState(JSON.parse(localStorage.getItem("tasks")) || []);
@@ -13,6 +15,7 @@ const App = () => {
   return (
     <>
       <div className="container">
+        <Header />
         <data.Provider value={tasks}>
           
         </data.Provider>
